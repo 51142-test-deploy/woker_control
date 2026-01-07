@@ -1,0 +1,248 @@
+@font-face {
+    font-family: 'Prompt';
+    src: url('../assent/font/Prompt-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+:root {
+    --primary-color: #f01329;
+    --black-color: #000;
+    --white-color: #fff;
+    --font-color: #fff;
+    --bg-color: #fff;
+}
+
+* {
+    font-family: 'Prompt', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: var(--font-color);
+    padding: 1rem;
+}
+
+nav h2 {
+    width: 50%;
+}
+
+nav ul {
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--font-color);
+}
+
+main {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.box {
+    border: 3px solid #f01329;
+    border-radius: 15px;
+    width: 85%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    overflow: hidden;
+    padding: 1rem;
+}
+
+.woker-card {
+    border: 1.5px solid #000;
+    border-radius: 15px;
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.info {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.head {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 18rem;
+
+}
+
+.btn {
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.btn button {
+    border-radius: 15px;
+    width: 50px;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn button:hover {
+    background-color: var(--primary-color);
+    color: var(--font-color);
+}
+
+.content {
+    position: relative;
+    width: 75%;
+    height: 60vh;
+    border: 3px solid #000;
+    border-radius: 15px;
+    padding: 25px;
+}
+
+.content form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+}
+
+.content form div p {
+    margin-bottom: 0.5rem;
+}
+
+.content form input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.content form input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(240, 19, 41, 0.2);
+}
+
+.btn-box {
+    grid-column: span 2;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.btn-box button {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-box button:hover {
+    background-color: #d00f22;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    border-radius: 15px;
+    position: relative;
+    animation: fadeIn 0.4s;
+}
+
+.modal .content {
+    width: 100%;
+    height: auto;
+    border: none;
+    padding: 10px;
+}
+
+.modal h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--black-color);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}

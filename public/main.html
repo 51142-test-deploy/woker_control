@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>woorker management</title>
+    <link rel="stylesheet" href="../public/style_sheet/style.css">
+</head>
+
+<body>
+    <nav>
+        <h2>woorker management</h2>
+        <ul>
+            <li><a href="#">พนักงาน</a></li>
+        </ul>
+        <ul>
+            <li><a href="add_worker.html">เพื่มพนักงาน</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="box">
+            <div class="head">
+                <h2>ชื่อ</h2>
+                <h2>ตำแหน่ง</h2>
+                <h2>เงินเดือน</h2>
+            </div>
+            <div class="woker-card">
+                <div class="info">
+                    <div class="name">
+                        กิ๊ก สมชาย
+                    </div>
+                    <div class="role">
+                        ผู้จัดการ
+                    </div>
+                    <div class="salaly">
+                        50,000 บาท
+                    </div>
+                </div>
+                <div class="btn">
+                    <button class="edit">แก้ไข</button>
+                    <button class="delete">ลบ</button>
+                </div>
+            </div>
+            <div class="woker-card">
+                <div class="info">
+                    <div class="name">
+                        กาย สมาชิก
+                    </div>
+                    <div class="role">
+                        เลขา
+                    </div>
+                    <div class="salaly">
+                        35,000 บาท
+                    </div>
+                </div>
+                <div class="btn">
+                    <button class="edit">แก้ไข</button>
+                    <button class="delete">ลบ</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="content">
+                <h2>แก้ไขข้อมูลพนักงาน</h2>
+                <form action="">
+                    <div class="name">
+                        <p><strong>ชื่อ-นามสกุล</strong></p>
+                        <input type="text" placeholder="ชื่อ" name="name">
+                    </div>
+                    <div class="last-name">
+                        <p><strong>นามสกุล</strong></p>
+                        <input type="text" placeholder="นามสกุล" name="surname">
+                    </div>
+                    <div class="role">
+                        <p><strong>role</strong></p>
+                        <input type="text" placeholder="ตำแหน่ง" name="position">
+                    </div>
+                    <div class="salaly">
+                        <p><strong>เงินเดือน</strong></p>
+                        <input type="text" placeholder="เงินเดือน" name="salary">
+                    </div>
+                    <div class="btn-box">
+                        <button type="submit">บันทึก</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
