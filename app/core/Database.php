@@ -1,6 +1,6 @@
 <?php 
 class Database {
-    private $hostname = '127.0.0.1:3307';
+    private $hostname = 'localhost';
     private $username = 'root';
     private $password = '';
     private $dbname = 'woker';

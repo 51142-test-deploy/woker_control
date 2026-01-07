@@ -11,9 +11,12 @@
             <?= $data['worker_salary'] ?>
         </div>
     </div>
-    <div class="btn">
+    <form method="post" class="btn">
+        <input name="delete_target" type="hidden" value="<?= $data['worker_name'] ?>">
+        <input name="target_name" type="hidden" value="<?= $data['worker_name'] ?>">
+
         <button class="edit">แก้ไข</button>
-        <button class="delete">ลบ</button>
-    </div>
+        <button name="delete_btn" class="delete">ลบ</button>
+    </form>
 </div>
 <?php endforeach ?>

@@ -1,7 +1,5 @@
 <?php 
 require __DIR__ . "/../app/config/index.php";
-
-$workerController = new WorkersController();
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +19,7 @@ $workerController = new WorkersController();
             <li><a href="#">พนักงาน</a></li>
         </ul>
         <ul>
-            <li><a href="add_worker.html">เพื่มพนักงาน</a></li>
+            <li><a href="./add_worker.php">เพื่มพนักงาน</a></li>
         </ul>
     </nav>
     <main>
@@ -52,7 +50,7 @@ $workerController = new WorkersController();
             </div> -->
         </div>
     </main>
-    <div id="editModal" class="modal">
+    <!-- <div id="editModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
             <div class="content">
@@ -80,8 +78,7 @@ $workerController = new WorkersController();
                 </form>
             </div>
         </div>
-    </div>
-    <script src="script.js"></script>
+    </div> -->
 </body>
 
 </html>

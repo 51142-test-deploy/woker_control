@@ -1,29 +1,9 @@
-<?php
-require __DIR__ . '/../app/config/add_worker.php';
-?>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>add woker</title>
-    <link rel="stylesheet" href="../public/style_sheet/style.css">
-</head>
-
-<body>
-    <nav>
-        <h2>woorker management</h2>
-        <ul>
-            <li><a href="./index.php">พนักงาน</a></li>
-        </ul>
-        <ul>
-            <li><a href="#">เพื่มพนักงาน</a></li>
-        </ul>
-    </nav>
-    <main>
+<div id="editModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
         <div class="content">
-            <form method="post" action="">
+            <h2>แก้ไขข้อมูลพนักงาน</h2>
+            <form action="">
                 <div class="name">
                     <p><strong>ชื่อ-นามสกุล</strong></p>
                     <input type="text" placeholder="ชื่อ" name="name">
@@ -41,11 +21,9 @@ require __DIR__ . '/../app/config/add_worker.php';
                     <input type="text" placeholder="เงินเดือน" name="salary">
                 </div>
                 <div class="btn-box">
-                    <button name="submit_btn" type="submit">เพิ่มพนักงาน</button>
+                    <button type="submit">บันทึก</button>
                 </div>
             </form>
         </div>
-    </main>
-</body>
-
-</html>
+    </div>
+</div>
