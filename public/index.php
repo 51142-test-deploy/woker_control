@@ -1,3 +1,9 @@
+<?php 
+require __DIR__ . "/../app/config/index.php";
+
+$workerController = new WorkersController();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,7 +31,9 @@
                 <h2>ตำแหน่ง</h2>
                 <h2>เงินเดือน</h2>
             </div>
-            <div class="woker-card">
+
+            <?php $workerController->GetAllUser() ?>
+            <!-- <div class="woker-card">
                 <div class="info">
                     <div class="name">
                         กิ๊ก สมชาย
@@ -41,24 +49,7 @@
                     <button class="edit">แก้ไข</button>
                     <button class="delete">ลบ</button>
                 </div>
-            </div>
-            <div class="woker-card">
-                <div class="info">
-                    <div class="name">
-                        กาย สมาชิก
-                    </div>
-                    <div class="role">
-                        เลขา
-                    </div>
-                    <div class="salaly">
-                        35,000 บาท
-                    </div>
-                </div>
-                <div class="btn">
-                    <button class="edit">แก้ไข</button>
-                    <button class="delete">ลบ</button>
-                </div>
-            </div>
+            </div> -->
         </div>
     </main>
     <div id="editModal" class="modal">
